@@ -198,8 +198,8 @@ function LeadCard({ lead, onClick }) {
 function AuthScreen({ onLogin }) {
   const [mode, setMode] = useState("login");
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("arjun@leadflow.in");
-  const [pass, setPass] = useState("demo123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
 
