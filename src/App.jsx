@@ -225,7 +225,6 @@ function AuthScreen({ onLogin }) {
           <p style={{ color: "#6B7280", fontSize: 13, margin: "0 0 22px" }}>{mode === "login" ? "Login to your account" : "Create your free account"}</p>
 
           <div style={{ background: "#EEF2FF", borderRadius: 10, padding: "10px 14px", marginBottom: 20, fontSize: 12, color: "#4338CA" }}>
-            💡 Demo: arjun@leadflow.in / demo123
           </div>
 
           {mode === "signup" && <Input label="Full Name" value={name} onChange={setName} placeholder="Arjun Mehta" required />}
