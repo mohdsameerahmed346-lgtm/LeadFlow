@@ -199,12 +199,12 @@ function AuthScreen({ onLogin }) {
   const [mode, setMode] = useState("login");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [authPass, setAuthPass] = useState("");
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
 
   function handle() {
-    if (!email || !pass) { setErr("Please fill all fields."); return; }
+    if (!email || !authpass) { setErr("Please fill all fields."); return; }
     if (mode === "signup" && !name) { setErr("Please enter your name."); return; }
     setLoading(true);
     setTimeout(() => { setLoading(false); onLogin(DEMO_USER); }, 1000);
@@ -229,7 +229,7 @@ function AuthScreen({ onLogin }) {
 
           {mode === "signup" && <Input label="Full Name" value={name} onChange={setName} placeholder="Arjun Mehta" required />}
           <Input label="Email" value={email} onChange={setEmail} placeholder="you@email.com" type="email" required />
-          <Input label="Password" value={pass} onChange={setPass} placeholder="••••••••" type="password" required />
+          <Input label="Password" value={authpass} onChange={setAuthPass} placeholder="••••••••" type="password" required />
 
           {err && <div style={{ color: "#EF4444", fontSize: 13, marginBottom: 12, background: "#FEF2F2", padding: "8px 12px", borderRadius: 8 }}>⚠️ {err}</div>}
 
